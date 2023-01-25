@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LangLight - 语灯 | 文章</title>
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+    <style>
+        .ppt{
+		   font: 96px "微软雅黑" !important; /*设置字体和字体大小*/
+		   margin:50px auto !important; /*设置元素外边距*/
+		   font-weight: 500 !important; /*设置字体粗细*/
+		   text-align: center !important; /*设置文字居中*/
+		   color: #9b9b9b !important; /*设置文字颜色*/
+           text-shadow: 0 8px 10px #000000 !important;
+		   -webkit-animation:bounce 2s infinite !important;/*设置动画*/
+		}
+		@-webkit-keyframes bounce{/*创建动画*/
+		   0%,100%,20%,50%,80%{
+		      -webkit-transform:translateY(0);
+		   }40%{
+		      -webkit-transform:translateY(-30px);
+		   }60%{
+		      -webkit-transform:translateY(-15px);
+		   }
+		}
+    </style>
+
+    <!-- 右键屏蔽 -->
+    <script type="text/javascript">
+        //屏蔽右键菜单
+        document.oncontextmenu = function (event){
+            if(window.event){
+                event = window.event;
+            }try{
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+                    return false;
+                }
+                return true;
+            }catch (e){
+                return false; 
+            } 
+        }
+        
+        //屏蔽粘贴
+        document.onpaste = function (event){
+            if(window.event){
+                event = window.event;
+            }try{
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+                    return false;
+                }
+                return true;
+            }catch (e){
+                return false;
+            }
+        }
+        
+        //屏蔽复制
+        // document.oncopy = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     }catch (e){
+        //         return false;
+        //     }
+        // }
+        
+        //屏蔽剪切
+        // document.oncut = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     }catch (e){
+        //         return false;
+        //     }
+        // }
+        
+        //屏蔽选中
+        // document.onselectstart = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     } catch (e) {
+        //         return false;
+        //     }
+        // }
+    </script>
+    
+</head>
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <span class="w3yellow">Lang</span>Light
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">欢迎首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">关于我们</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="article.html">热门文章</a>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">加入社区</a>
+                        </li>
+                        <li class="nav-item search-right">
+                            <a href="#search" class="btn search-btn" title="search"><span class="fas fa-search me-2" aria-hidden="true"></span></a>
+                            <!-- search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <h3 class="title-w3l two mb-4 text-left">亲爱的造语人呐，你想知道些什么？</h3>
+                                    <form action="#" method="GET" class="search-box d-flex position-relative">
+                                        <input type="search" placeholder="请输入关键词..." name="search" required="required" autofocus="">
+                                        <button type="submit" class="btn"><span class="fas fa-search" aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close">×</a>
+                            </div>
+                            <!-- /search popup -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            加入社区 </h2>
+                        <p class="inner-page-para mt-2">
+                            一个由造语爱好者、语言研究爱好者、逻辑语言爱好者组成的社区</p>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">首页</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> 加入</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <div class="map-iframe">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe> -->
+    </div>
+    <!-- /contacts -->
+    <!-- contact-form 2 -->
+    <section id="counts" class="w3lcounts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 w3stats_info counter_grid" style="width: 100%;">
+                            <div class="count-box">
+                                <p class="ppt">社区Q群：577415436</p>
+                                <a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank">
+                                    <div class="submit-w3l-button" style="align-content: center;">
+                                        <button class="btn btn-style btn-primary"><span class="fab fa-qq"></span>跳转QQ</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <p style="font-size: 1% ;">*这里的布局站长偷了个小懒，主要是太困了</p>
+                </div>
+    </section>
+
+    <span style="padding: 60px;"></span>
+
+    <!-- /contact-form-2 -->
+    <!-- //contacts -->
+    <!--/w3l-footer-29-main-->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container py-lg-4">
+                <h2>欢迎加入我们这个大家庭<br>
+                    学习&分享&交友</h2>
+                <div class="row footer-top-29 mt-md-5 mt-4">
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-1">
+                        <h6 class="footer-title-29">鸣谢</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li>Vljev</li>
+                                <li>Pooger</li>
+                                <li>BH-x望月正心</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
+                        <h6 class="footer-title-29">咨询</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li>站长QQ：3465762357 <br> (常不在线)</li>
+                                <li><a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank" class="mail">社区Q群：577415436 <br> (推荐途径)</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
+                        <h6 class="footer-title-29">跳转</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li><a href="index.html">欢迎首页</a></li>
+                                <li><a href="about.html">关于我们</a></li>
+                                <li><a href="article">热门文章</a></li>
+                                <li><a href="contact.html">加入社区</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
+                        <h6 class="footer-title-29">订阅</h6>
+                        <p>获取邮箱服务&订阅我们的每周进展</p>
+
+                        <form action="send.html" target="_blank" class="subscribe">
+                            <input type="email" name="email" placeholder="你的邮箱" required="">
+                            <button><span class="fas fa-paper-plane"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <span style="padding: 60px;"></span>
+                <center>
+                    <div class="main-social-footer-29 mt-4">
+                        <a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank" class="qq"><span class="fab fa-qq"></span></a>
+                        <!-- <a href="#" class="twitter"><span class="fab fa-twitter"></span></a>
+                        <a href="#" class="instagram"><span class="fab fa-instagram"></span></a>
+    
+                        <a href="#" class="linkd"><span class="fab fa-linkedin-in"></span></a> -->
+                    </div>
+                </center>
+                <div class="bottom-copies text-center">
+                    <p class="copy-footer-29">Copyright &copy; 2023.Organization LangLight All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- //bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

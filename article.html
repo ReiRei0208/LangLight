@@ -1,0 +1,453 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LangLight - 语灯 | 文章</title>
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+    <style>
+        .jat:hover {
+            color: #dc3545 !important;
+        }
+    </style>
+
+    <!-- 右键屏蔽 -->
+    <script type="text/javascript">
+        //屏蔽右键菜单
+        document.oncontextmenu = function (event){
+            if(window.event){
+                event = window.event;
+            }try{
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+                    return false;
+                }
+                return true;
+            }catch (e){
+                return false; 
+            } 
+        }
+        
+        //屏蔽粘贴
+        document.onpaste = function (event){
+            if(window.event){
+                event = window.event;
+            }try{
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+                    return false;
+                }
+                return true;
+            }catch (e){
+                return false;
+            }
+        }
+        
+        //屏蔽复制
+        // document.oncopy = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     }catch (e){
+        //         return false;
+        //     }
+        // }
+        
+        //屏蔽剪切
+        // document.oncut = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     }catch (e){
+        //         return false;
+        //     }
+        // }
+        
+        //屏蔽选中
+        // document.onselectstart = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     } catch (e) {
+        //         return false;
+        //     }
+        // }
+    </script>
+    
+</head>
+
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <span class="w3yellow">Lang</span>Light
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">欢迎首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">关于我们</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="article.html">热门文章</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">加入社区</a>
+                        </li>
+                        <li class="nav-item search-right">
+                            <a href="#search" class="btn search-btn" title="search"><span class="fas fa-search me-2" aria-hidden="true"></span></a>
+                            <!-- search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <h3 class="title-w3l two mb-4 text-left">有趣的造语人呐，你想知道些什么？</h3>
+                                    <form action="#" method="GET" class="search-box d-flex position-relative">
+                                        <input type="search" placeholder="请输入关键词..." name="search" required="required" autofocus="">
+                                        <button type="submit" class="btn"><span class="fas fa-search" aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close">×</a>
+                            </div>
+                            <!-- /search popup -->
+                        </li>
+                    </ul>
+                    <!--/search-right-->
+                    <ul class="header-search me-lg-4">
+                        <li class="get-btn">
+                            <a href="contact.html" class="btn btn-style btn-primary" title="search">立即投稿 <i class="fas fa-arrow-right ms-lg-4 ms-2"></i></a>
+                        </li>
+
+                    </ul>
+                    <!--//search-right-->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            热门文章 </h2>
+                        <p class="inner-page-para mt-2">
+                            一个富有创意、脑洞，天马行空的分享平台</p>
+                        </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">首页</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> 文章</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!--/w3l-services-1-->
+    <div class="w3l-services-1 py-5" id="grids-3">
+        <div class="container py-md-5 py-2">
+            <!--/row-1-->
+            <div class="row mb-5 pb-lg-4">
+                <div class="col-lg-6 p5-lg-4 services-1-left">
+                    <img src="assets/pages/img/23_1_10_沃兰蒂亚-架空世界.png" alt="" class="img-fluid radius-image">
+                </div>
+
+                <div class="services-1-right col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5">
+                    <div class="title-content text-left">
+                        <h6 class="title-subw3hny mb-1">Activity</h6>
+                        <h3 class="title-w3l mb-3">联合架空世界活动<br>&emsp;&emsp;&emsp;&emsp;——沃兰蒂亚</h3>
+                    </div>
+                    <p class="">在希克苏鲁星系中，有一个名为科古斯的天体系统。
+                        这个天体系统不知诞生了多久，
+                        繁衍出了九大行星以及一个轨迹恒定、相距甚远的双星系统。
+                        就在距离双星系统主星1.7亿公里的索德星上，
+                        一个被称作“沃兰蒂亚”的世界正在慢慢的繁衍生息着...</p>
+                    <br>
+                    <a href="#nofand" class="btn btn-style btn-primary mt-lg-5 mt-4">了解更多 <i class="fas fa-arrow-right ms-lg-4 ms-2"></i></a>
+                </div>
+            </div>
+            <!--//row-1-->
+
+        </div>
+    </div>
+    <!--//w3l-services-1-->
+    <section class="w3l-services-2" id="services1">
+        <div class="midd-w3 py-5">
+            <div class="container py-lg-5 py-md-3">
+                <div class="serve-title-header text-left">
+                    <h6 class="title-subw3hny mb-1">Show yourself</h6>
+                    <h3 class="title-w3l mb-3">大胆创作，分享创意</h3>
+                    <p class="pr-lg-5">如果你也想在这里分享你的天马行空的想法、奇思妙想的创意或是造语介绍、讨论文章等等等，<br>那就赶快加入我们这个大家庭，前来投稿吧！</p>
+                </div>
+                <div class="grids-of-5 row mt-5 text-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="grids5-info">
+                            <a href="contact.html" class="d-block zoom"><img src="assets/images/tg2.png" alt="" class="img-fluid radius-image"></a>
+                            <div class="blog-info">
+                                <h4><a href="contact.html">思考创作</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-5 mt-4">
+                        <div class="grids5-info">
+                            <a href="contact.html" class="d-block zoom"><img src="assets/images/tg1.png" alt="" class="img-fluid radius-image"></a>
+                            <div class="blog-info">
+                                <h4><a href="contact.html">投稿分享</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-sm-5 mt-4">
+                        <div class="grids5-info">
+                            <a href="contact.html" class="d-block zoom"><img src="assets/images/tg3.png" alt="" class="img-fluid radius-image"></a>
+                            <div class="blog-info">
+                                <h4><a href="contact.html">展示创意
+                                    </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /w3l-skills-->
+    <!--/w3-grids-3-->
+    <section class="w3l-services-6 py-5" id="services">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="title-services text-center">
+                <h6 class="title-subw3hny mb-1">Article link</h6>
+                <h3 class="title-w3l mb-3">近期投稿文章 </h3>
+            </div>
+            <div class="grids-area-hny main-cont-wthree-fea row pt-3 mt-5">
+                <div class="col-lg-4 col-md-6 grids-feature">
+                    <div class="area-box">
+                        <h4><a href="#feature" class="title-head jat">TiKi编码式语言</a></h4>
+                        <p>众所周知，base64编码就是可以将一张图片数据编码成一串...</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grids-feature mt-md-0 mt-4">
+                    <div class="area-box">
+                        <h4><a href="#feature" class="title-head jat">投稿须知</a></h4>
+                        <p>LangLight语灯社区即日起开始支持投稿啦！</p>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-4">
+                    <div class="area-box">
+                        <h4><a href="#feature" class="title-head jat">文章标题</a></h4>
+                        <p>文章内容/文章概况</p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 grids-feature mt-4">
+                    <div class="area-box">
+                        <h4><a href="#feature" class="title-head jat">文章标题</a></h4>
+                        <p>文章内容/文章概况</p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 grids-feature mt-4">
+                    <div class="area-box">
+                        <h4><a href="#feature" class="title-head jat">文章标题</a></h4>
+                        <p>文章内容/文章概况</p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 grids-feature mt-4">
+                    <div class="area-box">
+                        <h4><a href="#feature" class="title-head jat">文章标题</a></h4>
+                        <p>文章内容/文章概况</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!--//w3-grids-3-->
+    <!--/w3l-footer-29-main-->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container py-lg-4">
+                <h2>欢迎加入我们这个大家庭<br>
+                    学习&分享&交友</h2>
+                <div class="row footer-top-29 mt-md-5 mt-4">
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-1">
+                        <h6 class="footer-title-29">鸣谢</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li>Vljev</li>
+                                <li>Pooger</li>
+                                <li>BH-x望月正心</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
+                        <h6 class="footer-title-29">咨询</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li>站长QQ：3465762357 <br> (常不在线)</li>
+                                <li><a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank" class="mail">社区Q群：577415436 <br> (推荐途径)</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
+                        <h6 class="footer-title-29">跳转</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li><a href="index.html">欢迎首页</a></li>
+                                <li><a href="about.html">关于我们</a></li>
+                                <li><a href="article">热门文章</a></li>
+                                <li><a href="contact.html">加入社区</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
+                        <h6 class="footer-title-29">订阅</h6>
+                        <p>获取邮箱服务&订阅我们的每周进展</p>
+
+                        <form action="send.html" target="_blank" class="subscribe">
+                            <input type="email" name="email" placeholder="你的邮箱" required="">
+                            <button><span class="fas fa-paper-plane"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <span style="padding: 60px;"></span>
+                <center>
+                    <div class="main-social-footer-29 mt-4">
+                        <a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank" class="qq"><span class="fab fa-qq"></span></a>
+                        <!-- <a href="#" class="twitter"><span class="fab fa-twitter"></span></a>
+                        <a href="#" class="instagram"><span class="fab fa-instagram"></span></a>
+    
+                        <a href="#" class="linkd"><span class="fab fa-linkedin-in"></span></a> -->
+                    </div>
+                </center>
+                <div class="bottom-copies text-center">
+                    <p class="copy-footer-29">Copyright &copy; 2023.Organization LangLight All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- //bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

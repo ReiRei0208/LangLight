@@ -1,0 +1,687 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LangLight - 语灯 | 关于</title>
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+    <!-- 右键屏蔽 -->
+    <script type="text/javascript">
+        //屏蔽右键菜单
+        document.oncontextmenu = function (event){
+            if(window.event){
+                event = window.event;
+            }try{
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+                    return false;
+                }
+                return true;
+            }catch (e){
+                return false; 
+            } 
+        }
+        
+        //屏蔽粘贴
+        document.onpaste = function (event){
+            if(window.event){
+                event = window.event;
+            }try{
+                var the = event.srcElement;
+                if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+                    return false;
+                }
+                return true;
+            }catch (e){
+                return false;
+            }
+        }
+        
+        //屏蔽复制
+        // document.oncopy = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     }catch (e){
+        //         return false;
+        //     }
+        // }
+        
+        //屏蔽剪切
+        // document.oncut = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     }catch (e){
+        //         return false;
+        //     }
+        // }
+        
+        //屏蔽选中
+        // document.onselectstart = function (event){
+        //     if(window.event){
+        //         event = window.event;
+        //     }try{
+        //         var the = event.srcElement;
+        //         if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+        //             return false;
+        //         }
+        //         return true;
+        //     } catch (e) {
+        //         return false;
+        //     }
+        // }
+    </script>
+    
+</head>
+
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <span class="w3yellow">Lang</span>Light
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">欢迎首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">关于我们</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="article.html">热门文章</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">加入社区</a>
+                        </li>
+                        <li class="nav-item search-right">
+                            <a href="#search" class="btn search-btn" title="search"><span class="fas fa-search me-2" aria-hidden="true"></span></a>
+                            <!-- search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <h3 class="title-w3l two mb-4 text-left">聪敏的造语人呐，你想知道些什么？</h3>
+                                    <form action="#" method="GET" class="search-box d-flex position-relative">
+                                        <input type="search" placeholder="请输入关键词..." name="search" required="required" autofocus="">
+                                        <button type="submit" class="btn"><span class="fas fa-search" aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close">×</a>
+                            </div>
+                            <!-- /search popup -->
+                        </li>
+                    </ul>
+                    <!--/search-right-->
+                    <ul class="header-search me-lg-4">
+                        <li class="get-btn">
+                            <a href="contact.html" class="btn btn-style btn-primary" title="search">立即投稿 <i class="fas fa-arrow-right ms-lg-4 ms-2"></i></a>
+                        </li>
+
+                    </ul>
+                    <!--//search-right-->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            关于我们 </h2>
+                        <p class="inner-page-para mt-2">
+                            一个自由、快乐、充满活力的语言爱好社区</p>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">首页</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> 关于</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!--/Counts-Section-->
+    <section id="counts" class="w3lcounts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 w3stats_info counter_grid" style="width: 100%;">
+                    <div class="count-box">
+                        <i class="fas fa-users"></i>
+                        <center style="font-size: 200%;"><b><span id="sitetime"></span></b></center>
+                    </div>
+                </div>
+
+                <script>
+                    function siteTime(){
+                        window.setTimeout("siteTime()", 1000);
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                         
+                        var today = new Date();
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth();
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                    
+                        var t1 = Date.UTC(2022,8,2,00,00,00);
+                        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                        var diff = t2-t1;
+                         
+                        var diffYears = Math.floor(diff/years);
+                        var diffDays = Math.floor((diff/days)-diffYears*365);
+                        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+                        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+                        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+                        document.getElementById("sitetime").innerHTML = "我们已经成立了 " + 
+                        "<span style='color:#dc3545;'>" + (diffYears*365 + diffDays) + "</span>" +
+                        " 天 " + 
+                        "<span style='color:#dc3545;'>" + diffHours + "</span>" +
+                        " 小时 " + 
+                        "<span style='color:#dc3545;'>" + diffMinutes + "</span>" +
+                        " 分 " + 
+                        "<span style='color:#dc3545;'>" + diffSeconds +  "</span>" +
+                        " 秒 ";
+                        }
+                    siteTime();
+                    </script>
+                    <!--存活时间 end-->
+
+            </div>
+
+        </div>
+    </section>
+    <!--//Counts-Section-->
+    <!--/bottom-3-grids-->
+    <div class="w3l-3-grids py-5" id="grids-3">
+        <div class="container py-md-5 py-2">
+            <!--/row-1-->
+            <div class="row mb-5 pb-lg-4">
+                <div class="col-lg-6 pe-lg-4">
+                    <div class="title-content text-left">
+                        <h6 class="title-subw3hny mb-1">say hello</h6>
+                        <h3 class="title-w3l">这里是“空朗”语言爱好<br>者交流社区 </h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5">
+                    <p>嗨喽，亲爱的语言爱好者！我们是LangLight语灯社区，一个由造语爱好者、语言研究爱好者、逻辑语言爱好者组成的社区。在这里，你可以分享你的想法，你的创意，或是你的ART语言；你也可以向他人请教语言知识，提升自己的能力；甚至，你还可以在这里结交有趣的灵魂~</p>
+                </div>
+            </div>
+            <!--//row-1-->
+            <div class="row pt-md-0 pt-5">
+                <div class="col-md-6">
+                    <div class="abw3-info">
+                        <img src="assets/images/banner5.jpg" alt="" class="img-fluid radius-image">
+                        <h3 class="title-w3l mt-4 mb-2">我们的理念</h3>
+                        <p class="">与每一位语言爱好者互帮互助，携手共进，一同谱写语圈的新篇章</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-md-0 mt-4">
+                    <div class="abw3-info">
+                        <img src="assets/images/banner1.jpg" alt="" class="img-fluid radius-image">
+                        <h3 class="title-w3l mt-4 mb-2">我们的初衷</h3>
+                        <p class="">为心怀梦想、富有热情的造语爱好者们创建一个散发活力的交流平台</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--//bottom-3-grids-->
+    <!--/team-->
+    <section id="team" class="w3lteam py-5">
+        <div class="container py-md-5">
+            <div class="title-content text-center">
+                <h6 class="title-subw3hny mb-1">AMONG US</h6>
+                <h3 class="title-w3l mb-5">入驻のART语言</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang5.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>亓风语|KyuFihhim</h4>
+                            <span>这里没有信仰 唯有希望 祈求月光</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang4.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>祝融语</h4>
+                            <span>对称优美的表意文字，望成为最好的表意艺术语</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang6.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>大共语|Дихиѯѫнеца</h4>
+                            <span>厄尔米图东与北部的语言，音系庞大，语法繁杂</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <span style="padding: 10px;"></span>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang9.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>西诺弗厄语|Xynofajetch</h4>
+                            <span>用于世界观构建的诺南语系人造偏屈折孤立语</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang10.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>安东语|Andovsh</h4>
+                            <span>#这位可爱的造语人还没有写语言签名...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang11.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>托卡语|ToCa</h4>
+                            <span>#这位可爱的造语人还没有写语言签名...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <span style="padding: 10px;"></span>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang1.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>帊语|Patgem</h4>
+                            <span>一个帊族使用的多层嵌套式语言awa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang2.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>福瑞沃语|Furaew</h4>
+                            <span>愿能创造出Furry圈造语的第一缕曙光</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang3.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>加什语|Cajh</h4>
+                            <span>希望Cajh加什语可以发展得越来越好</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <span style="padding: 10px;"></span>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang7.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>白菜语|LendaSarieh</h4>
+                            <span>VOS语序的先验分析语，集各地语言精华于一体</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang8.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>景梁语|景梁书</h4>
+                            <span>愿和平鸽在天空中自由地翱翔...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang12.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>T语|Ti-TLoKi</h4>
+                            <span>#这位可爱的造语人还没写语言签名...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <span style="padding: 10px;"></span>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang13.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>格尔诺语|Gen.r-nold</h4>
+                            <span>好奇一切与怀疑一切的自我型语言</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang14.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>堤切语|Ticehta</h4>
+                            <span>一个名字采用音译 意为“圣洁”的语言</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="assets/images/lang12.png" class="img-fluid radius-image" alt=""></div>
+                        <div class="member-info">
+                            <h4>T语|Ti-TLoKi</h4>
+                            <span>#这位可爱的造语人还没写语言签名...</span>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+    <!--/w3l-project-->
+    <section class="w3l-index05 py-5">
+        <div class="container py-md-3">
+            <div class="w3l-project-in">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="bottom-info">
+                            <div class="header-section pe-lg-5">
+                                <h5 class="title-subw3hny mb-3">Show yourself</h5>
+                                <h3 class="title-w3l two mb-3">不要犹豫，现在加入！
+                                </h3>
+                                <p>如果你也想在这里分享你的ART语言，那就不妨点击右方按钮加入我们吧！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 align-self mt-lg-0 mt-sm-5 mt-4">
+                        <div class="w3l-buttons d-sm-flex justify-content-end">
+                            <a href="contact.html" class="btn btn-style btn-primary">加入我们</a>
+                            <a href="article.html" class="btn btn-style transparant-btn ms-sm-3">看看文章 <i class="fas fa-arrow-right ms-lg-4 ms-2"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//w3l-project-->
+    <!--/w3l-midslider-->
+    <section class="w3l-midslider py-5" id="midslider">
+        <!-- /grids -->
+        <div class="container py-md-5">
+            <div class="row">
+                <div class="col-lg-5 title-content text-left pe-lg-5 mb-lg-0 mb-5">
+                    <h6 class="title-subw3hny mb-1">who join</h6>
+                    <h3 class="title-w3l mb-3">
+                        谁可以加入我们？</h3>
+                    <p class="mb-3">我们是一个开放、自由、快乐且充满活力的语言爱好社区，我们欢迎任何心怀善意的语言爱好者，
+                        无论你是造语爱好者、语言研究爱好者亦或是逻辑语言爱好者，你都可以来到这里，分享、学习甚至是结交有趣的灵魂！
+                    </p>
+                    <ul class="icon-list-items mt-3">
+                        <li class="icon-list-item">
+                            <i aria-hidden="true" class="fas fa-check"></i>
+                            造语爱好者
+                        </li>
+                        <li class="icon-list-item mt-2">
+                            <i aria-hidden="true" class="fas fa-check"></i>
+                            语言研究爱好者
+                        </li>
+                        <li class="icon-list-item mt-2">
+                            <i aria-hidden="true" class="fas fa-check"></i>
+                            逻辑语言爱好者
+
+                        </li>
+                        <li class="icon-list-item mt-2">
+                            <i aria-hidden="true" class="fas fa-check"></i>
+                            心怀善意的支持者
+
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- /grids -->
+                <div class="col-lg-7 stats_info-images ps-lg-5">
+                    <div class="stats_info-images-right row">
+                        <div class="col-6 mid-slider-content">
+                            <div style="width: 200%;"><img src="assets/images/共同.png" class="img-fluid radius-image" alt=""></div>
+                        </div>
+                        <!-- <div class="col-6 mid-slider-content">
+                            <img src="assets/images/ab2.jpg" class="img-fluid radius-image" alt="">
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+            <!-- /grids -->
+        </div>
+    </section>
+    <!--//w3l-midslider-->
+
+
+
+    <!--/w3l-footer-29-main-->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container py-lg-4">
+                <h2>欢迎加入我们这个大家庭<br>
+                    学习&分享&交友</h2>
+                <div class="row footer-top-29 mt-md-5 mt-4">
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-1">
+                        <h6 class="footer-title-29">鸣谢</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li>Vljev</li>
+                                <li>Pooger</li>
+                                <li>BH-x望月正心</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
+                        <h6 class="footer-title-29">咨询</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li>站长QQ：3465762357 <br> (常不在线)</li>
+                                <li><a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank" class="mail">社区Q群：577415436 <br> (推荐途径)</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5 pe-lg-5">
+                        <h6 class="footer-title-29">跳转</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li><a href="index.html">欢迎首页</a></li>
+                                <li><a href="about.html">关于我们</a></li>
+                                <li><a href="article.html">热门文章</a></li>
+                                <li><a href="contact.html">加入社区</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
+                        <h6 class="footer-title-29">订阅</h6>
+                        <p>获取邮箱服务&订阅我们的每周进展</p>
+
+                        <form action="send.html" target="_blank" class="subscribe">
+                            <input type="email" name="email" placeholder="你的邮箱" required="">
+                            <button><span class="fas fa-paper-plane"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <span style="padding: 60px;"></span>
+                <center>
+                    <div class="main-social-footer-29 mt-4">
+                        <a href="https://jq.qq.com/?_wv=1027&k=IRe6lsfc" target="_blank" class="qq"><span class="fab fa-qq"></span></a>
+                        <!-- <a href="#" class="twitter"><span class="fab fa-twitter"></span></a>
+                        <a href="#" class="instagram"><span class="fab fa-instagram"></span></a>
+    
+                        <a href="#" class="linkd"><span class="fab fa-linkedin-in"></span></a> -->
+                    </div>
+                </center>
+                <div class="bottom-copies text-center">
+                    <p class="copy-footer-29">Copyright &copy; 2023.Organization LangLight All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- //bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
